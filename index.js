@@ -3,7 +3,7 @@ let produtos = [{id:1,title:"Fjallraven - Foldsack No. 1 Backpack, Fits 15 Lapto
 
 let trecos = document.querySelector("#cards")
 
-function carregaProdutos(produtos){
+function carregaProdutos(listaProduto){
   
 const injection = produtos.map(produtos => `<div class="bg-white rounded p-4 relative"><img src="${produtos.image}" alt="" class="w-full h-56 object-contain"><div class="p-2 bg-orange-500 text-white font-bold absolute top-3 right-3 rounded">${produtos.rating.rate}</div><div><h2 class="font-semibold text-xl">${produtos.title}</h2><h6 class="font-bold">${produtos.category}</h6><h6 class="text-right text-2xl">R$  ${produtos.price}</h6></div></div>`).join('');
   return (injection);
